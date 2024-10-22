@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import Products from './ProductsList/Products';
 import UpdateProduct from './ProductsList/Update/UpdateProduct';
 import Profile from './Profile/Profile';
+import EditUser from './Profile/EditUser';
 function App() {
 
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ function App() {
         <Route path='/update/:id' element={<UpdateProduct />}/>
         <Route path='/logout' element={<p>Logout</p>}/>
         <Route path='/profile' element={<Profile />}/>
+        <Route path='/editProfile/:id' element={<EditUser />} />
         </Route>
         <Route path='/signup' element={<SignUP />}/>
         <Route path='/login' element={<Login />}/>
