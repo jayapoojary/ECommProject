@@ -5,10 +5,12 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { getProductsList } from '../../Redux2/User/operations';
+import { useNavigate } from 'react-router-dom';
 const useStyles = makeStyles(Style);
 const UpdateProduct = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const {id} = useParams(); //It will heps to take Value from Router. here it will take the Value of /:id
     
     console.log("productId ",id)
@@ -52,6 +54,8 @@ const UpdateProduct = () => {
         console.log(Result);
         alert("Product Updated")
         dispatch(getProductsList());
+        
+        navigate("/")
       };
 
     console.log("product ", product);

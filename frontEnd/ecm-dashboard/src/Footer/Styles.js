@@ -1,6 +1,6 @@
 export default theme => ({
     divStyle: () => ({
-        height: '55px',
+        height: '40px',
         backgroundColor: 'skyBlue',
         bottom: '0px',
         position: 'fixed', // Changed from absolute to fixed
